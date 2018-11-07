@@ -21,16 +21,16 @@ Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.awss3mock.enabled` (default is `true`)
 - `embedded.container.awss3mock.startup-timeout` (default is `30`)
 - `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.1.0`)
-- `embedded.container.awss3mock.http-port` (default is `9090`)
-- `embedded.container.awss3mock.https-port` (default is `9191`)
+- `embedded.container.awss3mock.http-endpoint-port` (default is `9090`)
+- `embedded.container.awss3mock.https-endpoint-port` (default is `9191`)
 
 Properties provided (in `application-it.properties`):
-- `embedded.container.awss3mock.http.endpoint`
-- `embedded.container.awss3mock.https.endpoint`
+- `embedded.container.awss3mock.endpoint.http`
+- `embedded.container.awss3mock.endpoint.https`
 
 Example for minimal configuration in `application-it.properties`:
 ```
-any-s3-endpoint.url=${embedded.container.awss3mock.http.endpoint}
+any-s3-endpoint.url=${embedded.container.awss3mock.endpoint.http}
 ```
 
 A properly configured AmazonS3 object is available as bean.

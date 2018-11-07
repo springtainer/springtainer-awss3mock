@@ -16,11 +16,9 @@ public class AwsS3MockProperties extends AbstractEmbeddedContainerProperties
 {
     public static final String BEAN_NAME = "embeddedAwsS3MockContainer";
 
-    private int httpPort = 9090;
+    private int httpEndpointPort = 9090;
 
-    private int httpsPort = 9191;
-
-    private String logLevel = "ERROR";
+    private int httpsEndpointPort = 9191;
 
     public AwsS3MockProperties()
     {
