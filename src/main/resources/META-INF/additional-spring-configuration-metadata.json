@@ -1,0 +1,35 @@
+{
+	"groups": [],
+	"properties": [
+		{
+			"name": "embedded.container.awss3mock.enabled",
+			"type": "java.lang.Boolean",
+			"description": "Enables/Disables container startup.",
+			"defaultValue": "true"
+		},
+		{
+			"name": "embedded.container.awss3mock.startup-timeout",
+			"type": "java.lang.Integer",
+			"description": "Max time to wait for a successfully started container",
+			"defaultValue": "30"
+		},
+		{
+			"name": "embedded.container.awss3mock.docker-image",
+			"type": "java.lang.String",
+			"description": "Docker-image",
+			"defaultValue": "s3mock:2.1.0"
+		},
+		{
+			"name": "embedded.container.awss3mock.endpoint-http-port",
+			"description": "Gets generated server http port. (Do not overwrite this!)",
+			"type": "java.lang.String",
+			"defaultValue": "9090"
+		},
+		{
+			"name": "embedded.container.awss3mock.endpoint-https-port",
+			"description": "Gets generated proxy https port. (Do not overwrite this!)",
+			"type": "java.lang.String",
+			"defaultValue": "9191"
+		}
+	]
+}
