@@ -25,12 +25,12 @@ Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.awss3mock.https-port` (default is `9191`)
 
 Properties provided (in `application-it.properties`):
-- `embedded.container.s3mock.http.endpoint`
-- `embedded.container.s3mock.https.endpoint`
+- `embedded.container.awss3mock.http.endpoint`
+- `embedded.container.awss3mock.https.endpoint`
 
 Example for minimal configuration in `application-it.properties`:
 ```
-any-s3-endpoint.url=${embedded.container.s3mock.http.endpoint}
+any-s3-endpoint.url=${embedded.container.awss3mock.http.endpoint}
 ```
 
 A properly configured AmazonS3 object is available as bean.

@@ -40,7 +40,7 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
     {
         return AmazonS3ClientBuilder.standard()
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(environment
-                        .getProperty("embedded.container.s3mock.http.endpoint"), "us-east-1"))
+                        .getProperty("embedded.container.awss3mock.http.endpoint"), "us-east-1"))
                 .withPathStyleAccessEnabled(true)
                 .withClientConfiguration(new ClientConfiguration().withProtocol(Protocol.HTTP))
                 .build();
@@ -71,8 +71,8 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
         protected Map<String, Object> providedProperties()
         {
             var provided = new HashMap<String, Object>();
-            provided.put("embedded.container.s3mock.http.endpoint", generateProtocolEndpoint(Protocol.HTTP));
-            provided.put("embedded.container.s3mock.https.endpoint", generateProtocolEndpoint(Protocol.HTTPS));
+            provided.put("embedded.container.awss3mock.http.endpoint", generateProtocolEndpoint(Protocol.HTTP));
+            provided.put("embedded.container.awss3mock.https.endpoint", generateProtocolEndpoint(Protocol.HTTPS));
             return provided;
         }
 
