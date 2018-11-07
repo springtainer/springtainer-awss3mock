@@ -53,15 +53,15 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
         protected Map<String, Object> providedProperties()
         {
             Map<String, Object> provided = new HashMap<>();
-            provided.put("embedded.container.awss3mock.endpoint.http", generateProtocolEndpoint(Protocol.HTTP));
-            provided.put("embedded.container.awss3mock.endpoint.https", generateProtocolEndpoint(Protocol.HTTPS));
+            provided.put("embedded.container.awss3mock.endpoint.http.url", generateProtocolEndpoint(Protocol.HTTP));
+            provided.put("embedded.container.awss3mock.endpoint.https.url", generateProtocolEndpoint(Protocol.HTTPS));
             return provided;
         }
 
         private String generateProtocolEndpoint(Protocol protocol)
         {
             return getContainerHost() + ":" + (protocol == Protocol.HTTP ? getContainerPort(properties
-                    .getHttpEndpointPort()) : getContainerPort(properties.getHttpsEndpointPort()));
+                    .getEndpointHttpPort()) : getContainerPort(properties.getEndpointHttpsPort()));
         }
     }
 }

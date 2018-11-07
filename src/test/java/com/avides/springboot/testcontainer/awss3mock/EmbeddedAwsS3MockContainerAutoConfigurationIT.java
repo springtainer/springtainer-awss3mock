@@ -12,13 +12,13 @@ public class EmbeddedAwsS3MockContainerAutoConfigurationIT extends AbstractIT
     @Test
     public void testGeneratedProperties() throws Exception
     {
-        assertThat(environment.getProperty("embedded.container.awss3mock.endpoint.http")).isNotEmpty();
-        assertThat(environment.getProperty("embedded.container.awss3mock.endpoint.https")).isNotEmpty();
+        assertThat(environment.getProperty("embedded.container.awss3mock.endpoint.http.url")).isNotEmpty();
+        assertThat(environment.getProperty("embedded.container.awss3mock.endpoint.https.url")).isNotEmpty();
 
         System.out.println();
         System.out.println("Resolved properties:");
-        System.out.println("Http endpoint url : " + environment.getProperty("embedded.container.awss3mock.endpoint.http"));
-        System.out.println("Https endpoint url: " + environment.getProperty("embedded.container.awss3mock.endpoint.https"));
+        System.out.println("Http endpoint url : " + environment.getProperty("embedded.container.awss3mock.endpoint.http.url"));
+        System.out.println("Https endpoint url: " + environment.getProperty("embedded.container.awss3mock.endpoint.https.url"));
     }
 
     @Test

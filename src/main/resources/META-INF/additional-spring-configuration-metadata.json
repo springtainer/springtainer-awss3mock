@@ -20,13 +20,13 @@
 			"defaultValue": "s3mock:2.1.0"
 		},
 		{
-			"name": "embedded.container.awss3mock.http-endpoint-port",
+			"name": "embedded.container.awss3mock.endpoint-http-port",
 			"description": "Gets generated server http port. (Do not overwrite this!)",
 			"type": "java.lang.String",
 			"defaultValue": "9090"
 		},
 		{
-			"name": "embedded.container.awss3mock.https-endpoint-port",
+			"name": "embedded.container.awss3mock.endpoint-https-port",
 			"description": "Gets generated proxy https port. (Do not overwrite this!)",
 			"type": "java.lang.String",
 			"defaultValue": "9191"

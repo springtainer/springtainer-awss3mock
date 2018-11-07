@@ -28,6 +28,6 @@ public abstract class AbstractIT
     @Before
     public void init()
     {
-        amazonS3 = AmazonS3Helper.buildAmazonS3(environment.getProperty("embedded.container.awss3mock.endpoint.http"), Protocol.HTTP);
+        amazonS3 = AmazonS3Helper.buildAmazonS3(environment.getProperty("embedded.container.awss3mock.endpoint.http.url"), Protocol.HTTP);
     }
 }
