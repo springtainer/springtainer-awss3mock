@@ -1,9 +1,9 @@
 springboot-testcontainer-awss3mock
-===================================
+==================================
 
 [![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/testcontainer/springboot-testcontainer-awss3mock/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.testcontainer%22%20AND%20a%3A%22springboot-testcontainer-awss3mock%22)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-awss3mock?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=springboot-testcontainer/springboot-testcontainer-awss3mock&amp;utm_campaign=Badge_Grade)
-[![Coverage Status](https://coveralls.io/repos/springboot-testcontainer/springboot-testcontainer-awss3mock/badge.svg)](https://coveralls.io/r/springboot-testcontainer/springboot-testcontainer-awss3mock)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-awss3mock)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-awss3mock)
 [![Build Status](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-awss3mock.svg?branch=master)](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-awss3mock)
 
 ### Dependency
@@ -11,7 +11,7 @@ springboot-testcontainer-awss3mock
 <dependency>
 	<groupId>com.avides.springboot.testcontainer</groupId>
 	<artifactId>springboot-testcontainer-awss3mock</artifactId>
-	<version>0.1.0-RC1</version>
+	<version>0.1.0-RC2</version>
 	<scope>test</scope>
 </dependency>
 ```
