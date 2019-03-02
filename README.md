@@ -11,7 +11,7 @@ springboot-testcontainer-awss3mock
 <dependency>
 	<groupId>com.avides.springboot.testcontainer</groupId>
 	<artifactId>springboot-testcontainer-awss3mock</artifactId>
-	<version>0.1.0-RC4</version>
+	<version>0.1.0-RC5</version>
 	<scope>test</scope>
 </dependency>
 ```
