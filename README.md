@@ -49,3 +49,13 @@ The container exports multiple labels to analyze running testcontainers:
 - `TESTCONTAINER_SERVICE=awss3mock`
 - `TESTCONTAINER_IMAGE=${embedded.container.awss3mock.docker-image}`
 - `TESTCONTAINER_STARTED=$currentTimestamp`
+
+## Special Note
+It's highly recommended to use BasicAWSCredentials with sample dates to avoid bad performance of the AWS-SDK.
+
+Example:
+`AmazonS3 amazonS3 = AmazonS3ClientBuilder.standard()
+	.withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials("acesskey", "secretkey")))
+                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(s3HttpEndpoint, Regions.EU_CENTRAL_1.getName()))
+                .build();`
+
