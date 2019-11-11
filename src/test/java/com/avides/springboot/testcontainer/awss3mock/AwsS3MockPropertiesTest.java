@@ -13,7 +13,7 @@ public class AwsS3MockPropertiesTest
         AwsS3MockProperties properties = new AwsS3MockProperties();
         assertTrue(properties.isEnabled());
         assertEquals(30, properties.getStartupTimeout());
-        assertEquals("adobe/s3mock:2.1.0", properties.getDockerImage());
+        assertEquals("adobe/s3mock:2.1.16", properties.getDockerImage());
         assertEquals(9090, properties.getEndpointHttpPort());
         assertEquals(9191, properties.getEndpointHttpsPort());
     }

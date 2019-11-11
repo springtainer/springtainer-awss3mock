@@ -21,7 +21,7 @@
 Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.awss3mock.enabled` (default is `true`)
 - `embedded.container.awss3mock.startup-timeout` (default is `30`)
-- `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.1.0`)
+- `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.1.16`)
 - `embedded.container.awss3mock.endpoint-http-port` (default is `9090`)
 - `embedded.container.awss3mock.endpoint-https-port` (default is `9191`)
 
