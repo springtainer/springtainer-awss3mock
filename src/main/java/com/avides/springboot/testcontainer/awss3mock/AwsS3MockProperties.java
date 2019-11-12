@@ -22,6 +22,6 @@ public class AwsS3MockProperties extends AbstractEmbeddedContainerProperties
 
     public AwsS3MockProperties()
     {
-        setDockerImage("adobe/s3mock:2.1.0");
+        setDockerImage("adobe/s3mock:2.1.16");
     }
 }

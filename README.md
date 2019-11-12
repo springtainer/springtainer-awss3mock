@@ -1,17 +1,18 @@
-springboot-testcontainer-awss3mock
-==================================
+# springboot-testcontainer-awss3mock
 
 [![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/testcontainer/springboot-testcontainer-awss3mock/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.testcontainer%22%20AND%20a%3A%22springboot-testcontainer-awss3mock%22)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-awss3mock)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-awss3mock)
-[![Build Status](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-awss3mock.svg?branch=master)](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-awss3mock)
+[![Build](https://github.com/springboot-testcontainer/springboot-testcontainer-awss3mock/workflows/release/badge.svg)](https://github.com/springboot-testcontainer/springboot-testcontainer-awss3mock/actions)
+[![Nightly build](https://github.com/springboot-testcontainer/springboot-testcontainer-awss3mock/workflows/nightly/badge.svg)](https://github.com/springboot-testcontainer/springboot-testcontainer-awss3mock/actions)
+[![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-awss3mock&metric=coverage)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-awss3mock)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-awss3mock&metric=alert_status)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-awss3mock)
+[![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-awss3mock&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-awss3mock)
 
 ### Dependency
 ```xml
 <dependency>
 	<groupId>com.avides.springboot.testcontainer</groupId>
 	<artifactId>springboot-testcontainer-awss3mock</artifactId>
-	<version>0.1.0-RC5</version>
+	<version>1.0.0-RC1</version>
 	<scope>test</scope>
 </dependency>
 ```
@@ -20,7 +21,7 @@ springboot-testcontainer-awss3mock
 Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.awss3mock.enabled` (default is `true`)
 - `embedded.container.awss3mock.startup-timeout` (default is `30`)
-- `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.1.0`)
+- `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.1.16`)
 - `embedded.container.awss3mock.endpoint-http-port` (default is `9090`)
 - `embedded.container.awss3mock.endpoint-https-port` (default is `9191`)
 
