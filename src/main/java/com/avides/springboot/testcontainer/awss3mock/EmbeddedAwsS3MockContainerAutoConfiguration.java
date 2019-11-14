@@ -41,7 +41,7 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
         }
 
         @Override
-        protected boolean isContainerReady(AwsS3MockProperties properties)
+        protected boolean isContainerReady(AwsS3MockProperties props)
         {
             AmazonS3 amazonS3 = AmazonS3Helper.buildAmazonS3(generateProtocolEndpoint(Protocol.HTTP), Protocol.HTTP);
             amazonS3.createBucket("testbucket");

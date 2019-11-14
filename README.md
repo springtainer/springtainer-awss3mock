@@ -12,7 +12,7 @@
 <dependency>
 	<groupId>com.avides.springboot.testcontainer</groupId>
 	<artifactId>springboot-testcontainer-awss3mock</artifactId>
-	<version>1.0.0-RC1</version>
+	<version>1.0.0-RC2</version>
 	<scope>test</scope>
 </dependency>
 ```
@@ -60,3 +60,4 @@ Example:
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(s3HttpEndpoint, Regions.EU_CENTRAL_1.getName()))
                 .build();`
 
+The `AmazonS3Helper` class can be used to build `AmazonS3` objects with sample credentials.
