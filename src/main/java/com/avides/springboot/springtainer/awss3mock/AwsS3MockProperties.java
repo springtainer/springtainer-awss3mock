@@ -1,8 +1,8 @@
-package com.avides.springboot.testcontainer.awss3mock;
+package com.avides.springboot.springtainer.awss3mock;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import com.avides.springboot.testcontainer.common.container.AbstractEmbeddedContainerProperties;
+import com.avides.springboot.springtainer.common.container.AbstractEmbeddedContainerProperties;
 
 import lombok.Getter;
 import lombok.Setter;

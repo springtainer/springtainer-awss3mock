@@ -1,6 +1,6 @@
-package com.avides.springboot.testcontainer.awss3mock;
+package com.avides.springboot.springtainer.awss3mock;
 
-import static com.avides.springboot.testcontainer.awss3mock.AwsS3MockProperties.BEAN_NAME;
+import static com.avides.springboot.springtainer.awss3mock.AwsS3MockProperties.BEAN_NAME;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +16,8 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 import com.amazonaws.Protocol;
 import com.amazonaws.services.s3.AmazonS3;
-import com.avides.springboot.testcontainer.common.container.AbstractBuildingEmbeddedContainer;
-import com.avides.springboot.testcontainer.common.container.EmbeddedContainer;
+import com.avides.springboot.springtainer.common.container.AbstractBuildingEmbeddedContainer;
+import com.avides.springboot.springtainer.common.container.EmbeddedContainer;
 
 @Configuration
 @ConditionalOnProperty(name = "embedded.container.awss3mock.enabled", matchIfMissing = true)

@@ -1,4 +1,4 @@
-package com.avides.springboot.testcontainer.awss3mock;
+package com.avides.springboot.springtainer.awss3mock;
 
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.Protocol;
