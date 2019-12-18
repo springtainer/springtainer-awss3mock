@@ -3,7 +3,7 @@
 
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-awss3mock</artifactId>
-  <version>1.0.0-RC3</version>
+  <version>1.0.0</version>
 
   <name>springtainer-awss3mock</name>
   <description>AwsS3Mock test-container</description>
