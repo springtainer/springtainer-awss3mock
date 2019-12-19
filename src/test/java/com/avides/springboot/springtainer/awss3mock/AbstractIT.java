@@ -1,4 +1,4 @@
-package com.avides.springboot.testcontainer.awss3mock;
+package com.avides.springboot.springtainer.awss3mock;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;

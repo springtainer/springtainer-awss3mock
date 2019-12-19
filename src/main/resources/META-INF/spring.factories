@@ -1,2 +1,2 @@
 org.springframework.cloud.bootstrap.BootstrapConfiguration=\
-com.avides.springboot.testcontainer.awss3mock.EmbeddedAwsS3MockContainerAutoConfiguration
+com.avides.springboot.springtainer.awss3mock.EmbeddedAwsS3MockContainerAutoConfiguration
