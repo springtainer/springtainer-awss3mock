@@ -32,9 +32,8 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
         return new AwsS3MockContainer("awss3mock", environment, properties);
     }
 
-    public class AwsS3MockContainer extends AbstractBuildingEmbeddedContainer<AwsS3MockProperties>
+    public static class AwsS3MockContainer extends AbstractBuildingEmbeddedContainer<AwsS3MockProperties>
     {
-
         public AwsS3MockContainer(String service, ConfigurableEnvironment environment, AwsS3MockProperties properties)
         {
             super(service, environment, properties);
