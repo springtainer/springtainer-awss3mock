@@ -17,7 +17,7 @@
 			"name": "embedded.container.awss3mock.docker-image",
 			"type": "java.lang.String",
 			"description": "Docker-image",
-			"defaultValue": "s3mock:2.1.21"
+			"defaultValue": "s3mock:2.4.7"
 		},
 		{
 			"name": "embedded.container.awss3mock.endpoint-http-port",
