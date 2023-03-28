@@ -14,7 +14,7 @@
 <dependency>
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-awss3mock</artifactId>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -25,7 +25,7 @@ Properties consumed (in `bootstrap-it.properties`):
 
 - `embedded.container.awss3mock.enabled` (default is `true`)
 - `embedded.container.awss3mock.startup-timeout` (default is `30`)
-- `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.4.7`)
+- `embedded.container.awss3mock.docker-image` (default is `adobe/s3mock:2.11.0`)
 - `embedded.container.awss3mock.endpoint-http-port` (default is `9090`)
 - `embedded.container.awss3mock.endpoint-https-port` (default is `9191`)
 
