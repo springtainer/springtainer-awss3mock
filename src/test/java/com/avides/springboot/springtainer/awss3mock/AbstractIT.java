@@ -10,8 +10,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.amazonaws.Protocol;
 import com.amazonaws.services.s3.AmazonS3;
-import com.github.dockerjava.api.DockerClient;
 import com.avides.springboot.springtainer.common.util.DockerClients;
+import com.github.dockerjava.api.DockerClient;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
