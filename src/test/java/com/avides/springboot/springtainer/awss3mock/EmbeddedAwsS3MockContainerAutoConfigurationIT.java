@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 
+import software.amazon.awssdk.services.s3.model.CreateBucketRequest;
+import software.amazon.awssdk.services.s3.model.ListObjectsV2Request;
+
 public class EmbeddedAwsS3MockContainerAutoConfigurationIT extends AbstractIT
 {
     @Test
@@ -24,8 +27,8 @@ public class EmbeddedAwsS3MockContainerAutoConfigurationIT extends AbstractIT
     @Test
     public void testAmazonS3() throws Exception
     {
-        amazonS3.createBucket("testbucket");
-        assertEquals(0, amazonS3.listObjects("testbucket", "test/1").getObjectSummaries().size());
+        s3Client.createBucket(CreateBucketRequest.builder().bucket("testbucket").build());
+        assertEquals(0, s3Client.listObjectsV2(ListObjectsV2Request.builder().bucket("testbucket").prefix("test/1").build()).contents().size());
     }
 
     @Configuration

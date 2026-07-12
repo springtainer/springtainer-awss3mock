@@ -14,7 +14,7 @@
 <dependency>
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-awss3mock</artifactId>
-  <version>2.0.9</version>
+  <version>3.0.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -40,7 +40,7 @@ Example for minimal configuration in `application-it.properties`:
 any-s3-endpoint.url=${embedded.container.awss3mock.endpoint.http.url}
 ```
 
-A properly configured AmazonS3 Object can be provided by the AmazonS3Helper.
+A properly configured `S3Client` can be provided by the `AmazonS3Helper`.
 
 ## Logging
 
@@ -50,7 +50,7 @@ To reduce logging insert this into the logback-configuration:
 <!-- Springtainer -->
 <logger name="com.github.dockerjava.jaxrs" level="WARN" />
 <logger name="com.github.dockerjava.core.command" level="WARN" />
-<logger name="org.apache.http" level="WARN" />
+<logger name="org.apache.hc.client5.http" level="WARN" />
 ```
 
 ## Labels
@@ -63,12 +63,16 @@ The container exports multiple labels to analyze running springtainers:
 
 ## Special Note
 
-It's highly recommended to use BasicAWSCredentials with sample dates to avoid bad performance of the AWS-SDK.
+Since version 3.0.0 this module uses AWS SDK for Java v2 (`software.amazon.awssdk:s3`) instead of the legacy v1 SDK.
+
+It's highly recommended to use static sample credentials to avoid bad performance of the AWS-SDK.
 
 Example:
-`AmazonS3 amazonS3 = AmazonS3ClientBuilder.standard()
-.withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials("acesskey", "secretkey")))
-.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(s3HttpEndpoint, Regions.EU_CENTRAL_1.getName()))
+`S3Client s3Client = S3Client.builder()
+.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create("acesskey", "secretkey")))
+.endpointOverride(URI.create("http://" + s3HttpEndpoint))
+.region(Region.EU_CENTRAL_1)
+.forcePathStyle(true)
 .build();`
 
-The `AmazonS3Helper` class can be used to build `AmazonS3` objects with sample credentials.
+The `AmazonS3Helper` class can be used to build `S3Client` objects with sample credentials.

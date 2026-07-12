@@ -3,7 +3,7 @@
 
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-awss3mock</artifactId>
-  <version>2.0.9</version>
+  <version>3.0.0</version>
 
   <name>springtainer-awss3mock</name>
   <description>AwsS3Mock test-container</description>
@@ -62,8 +62,7 @@
     <springtainer-common.version>2.0.9</springtainer-common.version>
     <lombok.version>1.18.46</lombok.version>
     <slf4j-api.version>2.0.18</slf4j-api.version>
-    <aws-java-sdk-s3.version>1.12.435</aws-java-sdk-s3.version>
-    <httpclient.version>4.5.14</httpclient.version>
+    <s3.version>2.46.0</s3.version>
     <!-- Testing -->
     <jacoco.version>0.8.15</jacoco.version>
     <junit-jupiter.version>5.12.2</junit-jupiter.version>
@@ -91,38 +90,10 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.amazonaws</groupId>
-      <artifactId>aws-java-sdk-s3</artifactId>
-      <version>${aws-java-sdk-s3.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.fasterxml.jackson.core</groupId>
-          <artifactId>jackson-core</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>com.fasterxml.jackson.core</groupId>
-          <artifactId>jackson-databind</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>commons-codec</groupId>
-          <artifactId>commons-codec</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>commons-logging</groupId>
-          <artifactId>commons-logging</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.apache.httpcomponents</groupId>
-          <artifactId>httpclient</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <!-- aws-java-sdk-s3's own transitive httpclient is excluded above; declared directly here since AWS SDK v1's AmazonHttpClient needs
-           org.apache.http.protocol.HttpRequestExecutor at runtime and this module (unlike the others) doesn't otherwise pull in httpclient -->
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
-      <version>${httpclient.version}</version>
+      <!-- AWS SDK v2; defaults to the Apache HttpClient 5-based sync client (no separate httpclient/httpclient5 dependency needed) -->
+      <groupId>software.amazon.awssdk</groupId>
+      <artifactId>s3</artifactId>
+      <version>${s3.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>

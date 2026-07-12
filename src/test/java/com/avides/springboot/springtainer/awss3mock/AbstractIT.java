@@ -8,10 +8,10 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.amazonaws.Protocol;
-import com.amazonaws.services.s3.AmazonS3;
 import com.avides.springboot.springtainer.common.util.DockerClients;
 import com.github.dockerjava.api.DockerClient;
+
+import software.amazon.awssdk.services.s3.S3Client;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -23,11 +23,11 @@ public abstract class AbstractIT
     @Autowired
     protected ConfigurableEnvironment environment;
 
-    protected AmazonS3 amazonS3;
+    protected S3Client s3Client;
 
     @BeforeEach
     public void init()
     {
-        amazonS3 = AmazonS3Helper.buildAmazonS3(environment.getProperty("embedded.container.awss3mock.endpoint.http.url"), Protocol.HTTP);
+        s3Client = AmazonS3Helper.buildS3Client(environment.getProperty("embedded.container.awss3mock.endpoint.http.url"), Protocol.HTTP);
     }
 }
