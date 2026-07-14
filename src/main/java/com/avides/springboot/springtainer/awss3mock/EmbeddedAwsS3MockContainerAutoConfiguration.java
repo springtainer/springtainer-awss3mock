@@ -43,10 +43,12 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
         @Override
         protected boolean isContainerReady(AwsS3MockProperties props)
         {
-            var s3Client = AmazonS3Helper.buildS3Client(generateProtocolEndpoint(Protocol.HTTP), Protocol.HTTP);
-            s3Client.createBucket(CreateBucketRequest.builder().bucket("testbucket").build());
-            s3Client.deleteBucket(DeleteBucketRequest.builder().bucket("testbucket").build());
-            return true;
+            try (var s3Client = AmazonS3Helper.buildS3Client(generateProtocolEndpoint(Protocol.HTTP), Protocol.HTTP))
+            {
+                s3Client.createBucket(CreateBucketRequest.builder().bucket("testbucket").build());
+                s3Client.deleteBucket(DeleteBucketRequest.builder().bucket("testbucket").build());
+                return true;
+            }
         }
 
         @Override
