@@ -1,11 +1,10 @@
 # springtainer-awss3mock
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.avides.springboot.springtainer/springtainer-awss3mock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.avides.springboot.springtainer/springtainer-awss3mock)
-[![Build](https://github.com/springtainer/springtainer-awss3mock/workflows/release/badge.svg)](https://github.com/springtainer/springtainer-awss3mock/actions)
-[![Nightly build](https://github.com/springtainer/springtainer-awss3mock/workflows/nightly/badge.svg)](https://github.com/springtainer/springtainer-awss3mock/actions)
-[![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-awss3mock&metric=coverage)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-awss3mock)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-awss3mock&metric=alert_status)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-awss3mock)
-[![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-awss3mock&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-awss3mock)
+[![Maven Central](https://img.shields.io/maven-central/v/com.avides.springboot.springtainer/springtainer-awss3mock.svg?label=maven-central)](https://search.maven.org/artifact/com.avides.springboot.springtainer/springtainer-awss3mock)
+[![Release](https://github.com/springtainer/springtainer-awss3mock/actions/workflows/release.yml/badge.svg)](https://github.com/springtainer/springtainer-awss3mock/actions/workflows/release.yml)
+[![Nightly build](https://github.com/springtainer/springtainer-awss3mock/actions/workflows/nightly.yml/badge.svg)](https://github.com/springtainer/springtainer-awss3mock/actions/workflows/nightly.yml)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-awss3mock&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=springtainer_springtainer-awss3mock)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-awss3mock&metric=coverage)](https://sonarcloud.io/summary/new_code?id=springtainer_springtainer-awss3mock)
 
 ### Dependency
 
