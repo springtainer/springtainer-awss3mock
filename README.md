@@ -12,7 +12,7 @@
 <dependency>
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-awss3mock</artifactId>
-  <version>3.0.0-RC2</version>
+  <version>3.0.0-RC3</version>
   <scope>test</scope>
 </dependency>
 ```
