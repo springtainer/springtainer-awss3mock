@@ -14,10 +14,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.ConfigurableEnvironment;
 
-import com.amazonaws.Protocol;
-import com.amazonaws.services.s3.AmazonS3;
 import com.avides.springboot.springtainer.common.container.AbstractBuildingEmbeddedContainer;
 import com.avides.springboot.springtainer.common.container.EmbeddedContainer;
+
+import software.amazon.awssdk.services.s3.model.CreateBucketRequest;
+import software.amazon.awssdk.services.s3.model.DeleteBucketRequest;
 
 @Configuration
 @ConditionalOnProperty(name = "embedded.container.awss3mock.enabled", matchIfMissing = true)
@@ -42,10 +43,12 @@ public class EmbeddedAwsS3MockContainerAutoConfiguration
         @Override
         protected boolean isContainerReady(AwsS3MockProperties props)
         {
-            AmazonS3 amazonS3 = AmazonS3Helper.buildAmazonS3(generateProtocolEndpoint(Protocol.HTTP), Protocol.HTTP);
-            amazonS3.createBucket("testbucket");
-            amazonS3.deleteBucket("testbucket");
-            return true;
+            try (var s3Client = AmazonS3Helper.buildS3Client(generateProtocolEndpoint(Protocol.HTTP), Protocol.HTTP))
+            {
+                s3Client.createBucket(CreateBucketRequest.builder().bucket("testbucket").build());
+                s3Client.deleteBucket(DeleteBucketRequest.builder().bucket("testbucket").build());
+                return true;
+            }
         }
 
         @Override
